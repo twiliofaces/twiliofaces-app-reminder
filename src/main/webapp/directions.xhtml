@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:tf="http://twiliofaces.org/twiliofaces">
+	<tf:response>
+
+		<c:choose>
+			<c:when test="#{param['Digits'] == '3'}">
+				<tf:say value="Good bye."></tf:say>
+			</c:when>
+			<c:when test="#{param['Digits'] == '2'}">
+				<tf:say
+					value="Your appointment is located in a building near a road."></tf:say>
+				<tf:redirect value="./reminder.jsf"></tf:redirect>
+			</c:when>
+			<c:otherwise>
+				<tf:redirect value="./reminder.jsf"></tf:redirect>
+			</c:otherwise>
+		</c:choose>
+	</tf:response>
+</f:view>

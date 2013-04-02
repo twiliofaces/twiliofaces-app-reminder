@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tf="http://twiliofaces.org/twiliofaces">
+	<tf:response>
+		<tf:say
+			value="Hello this is a call from Twilio.  You have an appointment tomorrow at 9 AM."></tf:say>
+		<tf:gather action="./directions.jsf" numDigits="1">
+			<tf:say
+				value=" Please press 1 to repeat this menu. Press 2 for directions. Or press 3 if you are done."></tf:say>
+		</tf:gather>
+	</tf:response>
+</f:view>

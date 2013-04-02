@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" lang="en">
+<f:view contentType="text/html">
+	<h:head>
+		<meta charset="utf-8" />
+		<title>Twilio Appointment Reminder</title>
+	</h:head>
+	<h:body>
+		<h1>Twilio phone reminder demo</h1>
+		<h:messages style="color:red;margin:8px;" />
+		<br />
+		<h3>Enter your phone number to receive an automated reminder</h3>
+		<h:form>
+			<h:inputText value="#{appreminderController.number}" id="number" />
+			<h:commandButton action="#{appreminderController.makecall}"
+				value="invia" />
+		</h:form>
+	</h:body>
+</f:view>
+</html>
